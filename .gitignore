@@ -1,0 +1,15 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+.vscode/
+.idea/
+.DS_Store
+.pytest_cache/
+.coverage
+*.log
+data/pdfs/
+data/vector_store/
+*.faiss
+*.pkl
