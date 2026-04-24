@@ -1,0 +1,10 @@
+venv/
+.venv/
+__pycache__/
+.git/
+.gitignore
+data/pdfs/
+data/vector_store/
+*.pyc
+.env
+.DS_Store
