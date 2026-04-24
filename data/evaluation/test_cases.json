@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What machine learning models were used in this study?",
+    "expected_page": 2,
+    "expected_keywords": ["CNN", "LSTM", "ensemble"]
+  },
+  {
+    "question": "What dataset was used for the experiments?",
+    "expected_page": 2,
+    "expected_keywords": ["data", "actigraph", "sensor"]
+  },
+  {
+    "question": "What were the accuracy results of the proposed model?",
+    "expected_page": 4,
+    "expected_keywords": ["accuracy", "ensemble", "highest"]
+  },
+  {
+    "question": "How was the data preprocessed?",
+    "expected_page": 2,
+    "expected_keywords": ["normalization", "preprocessing", "range"]
+  },
+  {
+    "question": "What is the conclusion of the paper?",
+    "expected_page": 5,
+    "expected_keywords": ["prediction", "sleep", "quality"]
+  },
+  {
+    "question": "What evaluation metrics were used?",
+    "expected_page": 4,
+    "expected_keywords": ["accuracy", "precision", "recall"]
+  },
+  {
+    "question": "What wearable device was used for data collection?",
+    "expected_page": 2,
+    "expected_keywords": ["wearable", "IoT", "sensor"]
+  },
+  {
+    "question": "How does the ensemble model combine different architectures?",
+    "expected_page": 3,
+    "expected_keywords": ["ensemble", "CNN", "LSTM"]
+  }
+]

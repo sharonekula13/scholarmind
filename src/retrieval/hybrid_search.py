@@ -25,7 +25,7 @@ class HybridRetriever:
 
         return len(chunks)
 
-    def search(self, query, top_k=5, semantic_weight=0.5):
+    def search(self, query, top_k=5, semantic_weight=0.3):
         if self.index is None or self.bm25 is None:
             raise ValueError("No index built yet. Call build_index first.")
 
