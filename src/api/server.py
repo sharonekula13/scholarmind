@@ -73,3 +73,9 @@ def list_documents():
         "uploaded_files": uploaded_files,
         "total_chunks": len(retriever.chunks)
     }
+@app.post("/clear")
+def clear_documents():
+    retriever.chunks = []
+    retriever.index = None
+    uploaded_files.clear()
+    return {"message": "All documents cleared", "total_chunks": 0}
