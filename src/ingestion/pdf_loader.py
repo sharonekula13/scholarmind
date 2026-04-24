@@ -1,5 +1,6 @@
-import fitz #library is pymupdf but its import name is fitz
+import fitz
 import os
+
 
 def load_pdf(file_path):
     if not os.path.exists(file_path):
@@ -14,5 +15,13 @@ def load_pdf(file_path):
                 "page_number": page_num + 1,
                 "text": text.strip()
             })
+    
+    # Extract metadata from first page
+    metadata = {
+        "title": pages[0]["text"].split("\n")[0].strip() if pages else "Unknown",
+        "total_pages": len(pages),
+        "file_name": os.path.basename(file_path)
+    }
+    
     doc.close()
-    return pages
+    return pages, metadata

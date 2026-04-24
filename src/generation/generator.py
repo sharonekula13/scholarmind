@@ -1,14 +1,20 @@
 import ollama
 
 
-def generate_answer(query, context_chunks, model_name="llama3.2"):
+def generate_answer(query, context_chunks, model_name="llama3.2", meta_context=""):
     context = ""
     for i, chunk in enumerate(context_chunks):
         context += f"\n[Source: Page {chunk['page_number']}]\n{chunk['text']}\n"
 
-    prompt = f"""You are a helpful research assistant. Answer the question based ONLY on the provided context. 
+    prompt = f"""You are a helpful research assistant. Answer the question based ONLY on the provided context and document metadata.
 If the context doesn't contain enough information to answer, say "I don't have enough information to answer this."
 Always cite which page the information came from.
+
+Document Metadata:
+{meta_context}
+
+Context:
+{context}
 
 Context:
 {context}
